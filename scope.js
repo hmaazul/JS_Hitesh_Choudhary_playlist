@@ -62,8 +62,8 @@ function addone(num1){
 }
 
 
-console.log(addtwo(7));  // we can't access expression function before its initialisation
-const addtwo = function(num2){  //expression function
+// console.log(addtwo(7));  // we can't access expression function before its initialisation
+const addtwo = function(num2){  //expression function -> here we have hold the function in a variable which is a concept of hoisting
     return num2+2
 }
 
