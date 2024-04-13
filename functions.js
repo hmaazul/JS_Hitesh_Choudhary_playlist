@@ -13,7 +13,7 @@ function addTwoNumbers(num1, num2){
 let result = addTwoNumbers(4,5)
 // console.log(`The sum of two number is ${result}`)
 
-function loginUserMessage(username = "Ahmad"){  //its a default given value    
+function loginUserMessage(username = "Ahmad"){  //its a default given value if no value passed as arguement then this will be taken 
     if(!username){    //if an undefined value is there so this code will execute
         console.log("Please enter a username");
         return
@@ -21,9 +21,9 @@ function loginUserMessage(username = "Ahmad"){  //its a default given value
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("maaz"));
-// console.log(loginUserMessage());   //empty paranthesis gives undefined value
-// console.log(loginUserMessage(""));
+// console.log(loginUserMessage("maaz"));   // maaz just logged in
+// console.log(loginUserMessage());   // nothing passed gives undefined value but the default value is given so it will be taken as input
+// console.log(loginUserMessage(""));   // Please enter a username -> empty paranthesis
 
 
 //  ---------------------------------- Use of Rest Operator ----------------------------------------- //
@@ -32,7 +32,7 @@ function calculateCartPrice1(...number1){   // three dots represents rest operat
     return number1      
 }
 
-// console.log(calculateCartPrice1(200, 4000,5000,20,60930));   // number1 = [ 200, 4000, 5000, 20, 60930 ]
+// console.log(calculateCartPrice1(200, 4000,5000,20,60930));   // number1 = [ 200, 4000, 5000, 20, 60930 ] 
 
 function calculateCartPrice2(val1,val2, ...number1){
     return number1   // here val1 = 200,  val2=4000, and rest of the value will goes in number1 = [ 5000, 20, 60930 ]
@@ -52,7 +52,7 @@ function handleObject(anyObject) {
     console.log(`Username is ${anyObject.username} and his email is ${anyObject.email}`);
 }
 
-// handleObject(user)  // Username is Maaz and his email is abc@gmail.com
+// handleObject(user)  // Username is Maaz and his email is abc@gmail.com -> here user is passed as object
 // handleObject({
 //     username: "haque",
 //     email : "xyz@google.com"

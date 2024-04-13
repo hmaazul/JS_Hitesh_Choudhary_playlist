@@ -1,7 +1,7 @@
 //  the curly braces {} are block scope
 
 
-let a = 40   // this is global scope which is declared  outside of curly braces it can be accessed from anywhere
+let d = 40   // this is global scope which is declared  outside of curly braces it can be accessed from anywhere
 
 if (true) {
     let a = 10
@@ -12,9 +12,10 @@ if (true) {
     // console.log("Inner:", a);  //Inner: 10
 }
 
-// console.log(a);  // 40
-// console.log(b);
+// console.log(a);  // error can't access 'a' as it's scope bounded 
+// console.log(b);  // error can't access 'b' as it's scope bounded
 // console.log(c);
+// console.log(d);  // 40
 
 // ---------> let and const are scope bounded but var isn't
 // ----- we can access global scope anywhere also inside curly braces
@@ -22,7 +23,7 @@ if (true) {
 
 // --------------------------- Scope in Nested Function ------------------------------ //
 
-// -> we can access parent variable in child but we can't acccess child's scope in parent or outside it
+// -> we can access parent variable in child but we can't acccess child's variable in parent scope or outside it
 
 function one(){
     const username = "Maaz"
@@ -40,7 +41,7 @@ function one(){
 // one()
 
 
-//  Same for if else condition
+//  Same for nested if else condition
 
 if(true){
     const username = "Maaz"
@@ -56,7 +57,7 @@ if(true){
 
 // ++++++++++++++++++++++++++ Declaration of Function in different ways +++++++++++++++++++ //
 
-console.log(addone(5))
+// console.log(addone(5))
 function addone(num1){
     return num1+1
 }
