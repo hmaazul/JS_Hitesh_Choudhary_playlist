@@ -15,4 +15,8 @@
 
 ( () => {
     console.log("Alhamdulillah");
-} )()
+} )();
+
+( (name) => {
+    console.log(`My name is ${name}`);
+} )("Maaz")
