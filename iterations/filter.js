@@ -9,6 +9,8 @@ const lang = coding.forEach( (item) => {
 // So to overcome this drawback we use filter 
 
 // --------------------------------------- Filter --------------------------------- //
+// In filter we also need to declare a callback function which returns the value to the variable which stores it in the form of array
+
 const myNums = [1,2,3,4,5,6,7,8,9,10];
 
 // const newNums = myNums.filter( (num) => {
