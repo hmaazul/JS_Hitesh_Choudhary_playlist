@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Div</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const parent = document.createElement('h1')
+    console.log(parent);
+    parent.className = 'main'
+    parent.id = 'heading'
+    parent.style.backgroundColor = 'Green'
+    parent.setAttribute("title", "Name")
+
+    // parent.innerText = 'Maaz Ul Haque'
+    // also to add text we can do this as follow
+    const addText = document.createTextNode("Maaz Ul Haque")
+    parent.appendChild(addText)
+
+    // to add this created element to the body
+    document.body.appendChild(parent)
+</script>
+</html>
