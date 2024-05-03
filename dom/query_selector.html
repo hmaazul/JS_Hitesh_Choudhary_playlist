@@ -19,12 +19,14 @@
     // console.log(parent.children);   // return Html collection of 4 child elements
     // console.log(parent.childNodes);  // NodeList of child = 9 bec. every next line is a node + each div so it becomes 9
 
-    // console.log(parent.children[0].innerText);
+    
 
+    // iterate on HTML collection of children
     for (let itr = 0; itr < parent.children.length; itr++) {
         // console.log(parent.children[itr].innerText);
     }
 
+    // console.log(parent.children[0].innerText);
     parent.children[0].style.backgroundColor = 'Green'
 
     // console.log(parent.firstElementChild);
@@ -33,7 +35,7 @@
 
     // child to parent 
     const dayOne = document.querySelector('.day')
-    // console.log(dayOne);  // gives the first element having class as day = Monday
+    // console.log(dayOne);  // gives the first element having class as "day" which is Monday
     console.log(dayOne.parentElement);
 
     console.log(dayOne.nextElementSibling);   // tuesday is next to monday

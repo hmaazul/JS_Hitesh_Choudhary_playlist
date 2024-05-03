@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    // add list item
+    function addlist(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addlist('python')
+    addlist('ruby')
+    
+    //add list item
+    function addOptimisedList(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptimisedList('Java')
+
+    // edit item
+    const secondLang = document.querySelector('li:nth-child(2)');
+    // console.log(secondLang);
+    // secondLang.innerHTML = 'cpp'
+    const newLi = document.createElement('li')
+    newLi.textContent = 'dot net'
+    secondLang.replaceWith(newLi)
+
+    // edit item
+    const firstLang = document.querySelector('li:first-child')
+    // console.log(firstLang);  // javascript
+    firstLang.outerHTML = "<li>HTML</li>"
+
+    // remove element
+    const lastLang = document.querySelector('li:last-child')
+    // lastLang.remove()     //  java removed
+
+</script>
+</html>

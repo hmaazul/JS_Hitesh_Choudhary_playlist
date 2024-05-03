@@ -1,5 +1,5 @@
 // For of Loop
-// we can iterate over array, strings, map, etc using for of loop
+// we can iterate over array, strings, map, etc using for of loop but not on Objects
 // ["", "", ""]
 // [{}, {}, {}]
 
@@ -8,14 +8,14 @@
     
 // }
 
-// for of on Array
+// Array
 const myArr = [1,2,3,4,5]
 
 for (const num of myArr) {
     // console.log(num);
 }
 
-// for of on Strings
+// Strings
 const greetings = "Hello World!"
 for (const greet of greetings) {
     // if(greet === " ") continue   // to skip the space 
@@ -30,7 +30,7 @@ myMap.set('IND', "India")
 myMap.set('UK', "United Kingdom")
 myMap.set('Sri', "Srilanka")
 
-// console.log(myMap);
+// console.log(myMap);  // gives the whole map with keys and value
 
 for (const key of myMap) {
     // console.log(key);   // it returns both key and value in an array form
@@ -47,6 +47,6 @@ const mySports = {
     sports2: 'hockey'
 }
 
-for (const games of mySports) {
-    console.log(games);   // mySports is not iterable
-} 
+// for (const games of mySports) {
+//     console.log(games);   // mySports is not iterable
+// } 

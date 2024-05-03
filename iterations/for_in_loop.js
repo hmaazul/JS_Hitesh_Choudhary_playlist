@@ -9,7 +9,7 @@ const myObject = {
 
 for (const key in myObject) {
     // console.log(key);   // gives all the keys
-    // console.log(`${key} is shortcut of ${myObject[key]}`);
+    // console.log(`${key} is shortcut of ${myObject[key]}`);   // ${myObject[key]} = value of the given key
 }
 
 // On Arrays
@@ -30,5 +30,5 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 for (const key in map) {
-    console.log(map[key]);    // Not output
+    console.log(map[key]);    // No output
 }
