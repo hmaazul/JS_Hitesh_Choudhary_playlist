@@ -27,9 +27,26 @@
     
     // previously attachEvent() get used instead of addEventListener()
 
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log(e);
+    //     console.log('Images clicked');
+    // })
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
     document.getElementById('images').addEventListener('click', function(e){
-        console.log(e);
-        console.log('Images clicked');
+        // console.log(e);
+        // console.log(e.type);   // gives the type of event ex- click, keypress, etc...
+        // console.log(e.timeStamp);   // gives the time in millisecond from begining of event until it was created
+        // console.log(e.target);    // gives the target item ex - img, li, ul, etc...
+        // console.log(e.toElement);
+        // console.log(e.srcElement);  // same as target property
+        // console.log(e.currentTarget);   // identifies the element to which current event is attached like it's ul of id=images
+        // console.log(`${e.clientX} and ${e.clientY}`);  // gives the horizontal and vert. coordinate within application viewport at which the event occurred
+        // console.log(`${e.screenX} and ${e.screenY}`);  //gives hor. and vert. co-ord. of mouse pointer in screen co-ordinate
     })
 
 </script>
