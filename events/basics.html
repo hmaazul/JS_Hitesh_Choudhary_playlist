@@ -37,7 +37,7 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    document.getElementById('images').addEventListener('click', function(e){
+    // document.getElementById('images').addEventListener('click', function(e){
         // console.log(e);
         // console.log(e.type);   // gives the type of event ex- click, keypress, etc...
         // console.log(e.timeStamp);   // gives the time in millisecond from begining of event until it was created
@@ -47,6 +47,38 @@
         // console.log(e.currentTarget);   // identifies the element to which current event is attached like it's ul of id=images
         // console.log(`${e.clientX} and ${e.clientY}`);  // gives the horizontal and vert. coordinate within application viewport at which the event occurred
         // console.log(`${e.screenX} and ${e.screenY}`);  //gives hor. and vert. co-ord. of mouse pointer in screen co-ordinate
+        // console.log(`${e.altKey}`);  // returns true if alt is pressed otherwise false
+        // console.log(e.keyCode);
+    // })
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // },false)   
+
+    // document.getElementById('owl').addEventListener('click', (e)=>{
+    //     console.log("owl clicked");
+    //     e.stopPropagation();   // it stop propagation i.e. only owl clicked will be executed..
+    // },false)
+
+    // the default value is also false which is 3rd parameter
+    // here false/true represents event propagation - i.e. 
+    // false - event bubbling which means inside to outside / bottom to top (owl clicked -> clicked inside the ul)
+    // true - event capturing i.e. from outside to inside / top to bottom (clicked inside the ul -> owl clicked)
+
+    document.getElementById('google').addEventListener('click',(e)=>{
+        console.log("google click");
+        e.preventDefault();   // prevent the default function i.e. here it will not open Google link
+        e.stopPropagation();  // no bubbling
+    }, false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e);
+        if(e.target.tagName === 'IMG')
+        {
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        
     })
 
 </script>
