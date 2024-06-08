@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set TimeOut</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+    <div id="result"></div>
+</body>
+
+<script>
+    const changeText = ()=>{
+        document.querySelector('h1').innerHTML = 'JS Series'
+    }
+    const intervalId = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(intervalId)
+        document.querySelector('#result').innerHTML  = 'Timeout stopped'
+    })
+</script>
+</html>

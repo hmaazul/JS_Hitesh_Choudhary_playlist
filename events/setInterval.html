@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <h1>Chai aur Javascript</h1>
+    <div id="output"></div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const currTime = (str) => {
+        let date = new Date()
+        document.querySelector('#output').innerHTML = str + date.toLocaleString()
+    }
+    let intervalId = setInterval(currTime, 1000,'Current Time is: ');
+
+    clearInterval()
+</script>
+</html>
