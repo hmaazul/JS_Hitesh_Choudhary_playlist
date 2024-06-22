@@ -1,6 +1,6 @@
 # Javascript Engine diagram
 
-![JS Engine](<c:\Users\hmaaz\OneDrive\Desktop\WhatsApp Image 2024-06-22 at 10.55.12_6fcc1021.jpg>)
+![JS Engine](<WhatsApp Image 2024-06-22 at 10.55.12_6fcc1021.jpg>)
 
 # Fetch Working Diagram
 
