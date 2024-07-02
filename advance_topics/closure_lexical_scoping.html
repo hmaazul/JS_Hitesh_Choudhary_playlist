@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title> 
+</head>
+<body>
+    <button id="blue">Blue</button>
+    <button id="green">Green</button>
+</body>
+
+<script>
+    // lexical scoping 
+    // --> in this it gives access of prop. and methods to outer function from an inner function
+    // But we can't get access of inner fun. in outer also if there is another inner fun. then also both inner don't share anything
+    // 
+
+    function outer(){
+        let name = 'Maaz'
+
+        function inner(){
+            console.log(name);   // here we can access the outer function var inside the inner 
+        }
+        inner()
+    }
+    outer()
+</script>
+
+<script>
+    // Closure
+    // It is the combination of a function and the lexical environment within which that function was declared
+    // In closure when an inner fun. is returned not only it's context is returned but whole lexical context of that fun.
+    // is returned i.e. the context of inner func. as well as outer func.
+
+    // unlike lexical scoping here we aren't executing the inner func. but we are just returning the refernce of inner
+    //  func. and that inner function returns it's whole lexical context 
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;   
+    }
+
+    const myFunc = makeFunc();   // here in myFunc we are getting displayName func. as returned 
+    myFunc();                    // here we are executing that displayName func. stored
+
+
+    function clickHandeler(color){
+        // document.body.style.backgroundColor = `${color}`  // this will execute auto without clicking bec in onlick we executing it
+        //  so we have to use closure
+
+        function handleIt(){
+            document.body.style.backgroundColor = `${color}`
+        }
+        return handleIt    // here we are only returning the reference of func.
+    }
+
+    document.querySelector("#blue").onclick = clickHandeler('blue')   // here we are getting only reference of handleIt with its lexical scope
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+
+    class React {
+        constructor(){
+            this.library = 'React'
+            this.server = 'https://localhost:300'
+
+            document.querySelector('button').addEventListener('click', this.handleclick.bind(this))
+            // '1'this.handleclick.bind('2'this)  
+            // 1.this ->> this is the reference jisne call kiya and that's button
+            // so in handleclick() we got access of "button" through console.log(this) and that's new reference 
+
+            // but we need access of server from React class for that we use bind()            
+            // in bind we pass this to bind the properties of this class with eventListener
+        }
+
+        handleclick(){
+            console.log('Button clicked');
+            console.log(this);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
