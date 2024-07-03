@@ -4,7 +4,7 @@ let myName = "Maaz   "
 
 // console.log(myName.length);   //this gives length of string
 
-// if we want to get the actual length of string excluding spaces like we want to introduce new method like below
+// if we want to get the actual length of string excluding spaces, and we want to declare new method like below
 // console.log(myName.trueLength);
 
 // we have to inject our own methods in prototype
@@ -20,7 +20,7 @@ let heroPower = {
     }
 }
 
-//injecting our own methods in Object
+//injecting our own methods in Object directly, not in any variable
 Object.prototype.Check = function(){
     console.log(`This method is present in all objects`);
 }
@@ -56,15 +56,15 @@ const TASupport = {
     __proto__: TeachingSupport   // inheriting property of TeachingSupport
 }
 
-Teacher.__proto__ = User  // nheriting property of User in Teacher
+Teacher.__proto__ = User  // inheriting property of User in Teacher
 
-// Modern Syntax - it's just syntax change but behind the scene __proto__ method is working
+// Modern Syntax - it's just syntax change but behind the scene  "__proto__"  method is working
 
 // inheriting property of Teacher in TeachingSupport
 Object.setPrototypeOf(TeachingSupport, Teacher)  
 
 
-// The first problem of trueLength property
+// Our first problem of trueLength property
 
 let company = "ChaiAurCode    "
 
